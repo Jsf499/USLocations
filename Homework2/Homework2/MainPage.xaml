@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Homework2.MainPage">
+
+    <StackLayout Orientation="Vertical" Padding="0,20,0,0" BackgroundColor="Beige">
+        <Label TextColor="DarkGreen" Text="Enter an amount to see zipcodes with average tax returns near inputted amount" />
+        <StackLayout Orientation="Horizontal">
+            <Label TextColor="Black"  Text="Amount" FontSize="20"/>
+            <Entry Placeholder="Amount" x:Name="textAmount" HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <Label TextColor="DarkGreen" Text='Enter a city and state (abbreviation) and select "citystate" option to see average tax returns of zipcodes within' />
+        
+        <StackLayout Orientation="Horizontal">
+            <Label TextColor="Black" Text="City  " FontSize="20"/>
+            <Entry Placeholder="City" x:Name="City"  HorizontalOptions="FillAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label TextColor="Black" Text="State " FontSize="20"/>
+            <Entry Placeholder="State" x:Name="State"  HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+
+        <Label TextColor="Black" Text="Query Choice" FontSize="20"/>
+            <Picker x:Name="options" >
+                <Picker.Items >
+                    <x:String>Amount</x:String>
+                    <x:String>CityState</x:String>
+                </Picker.Items>
+                </Picker>
+     
+        <Button Text="Submit" Clicked ="Button_Clicked" />
+        <ListView x:Name= "view" BackgroundColor="Beige" SeparatorColor="DarkGreen" >
+   
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
